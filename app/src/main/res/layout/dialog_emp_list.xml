@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:project="http://schemas.android.com/tools"
+    app:cardElevation="@dimen/dim_5dp"
+    android:padding="@dimen/dim_10dp"
+    android:layout_marginVertical="@dimen/dim_5dp"
+    style="@style/DialogAnimation"
+    android:divider="@color/colorPrimaryDark"
+    android:dividerHeight="1.0px"
+    android:outlineSpotShadowColor="@color/colorPrimaryDark"
+    android:outlineProvider="background"
+    android:clipToPadding="false"
+    app:cardCornerRadius="@dimen/dim_20dp"
+    app:cardBackgroundColor="@color/colorScreenBg"
+    android:clipChildren="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_card_tool"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/card_box">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/dim_5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:padding="@dimen/dim_5dp"
+                    android:text="Employee List"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_size_16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dim_5dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_cross" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_layer_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_card_tool"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/dim_5dp"
+            android:padding="@dimen/dim_5dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_emp_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <ProgressBar
+                android:id="@+id/progress_circular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txt_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txt_size_12sp"
+                android:textColor="@color/colorGray"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/dim_5dp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                android:text="No Data Found"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

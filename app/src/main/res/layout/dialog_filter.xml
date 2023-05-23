@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:project="http://schemas.android.com/tools"
+    style="@style/DialogAnimation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_rounded_bg"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:divider="@color/colorPrimaryDark"
+    android:dividerHeight="1.0px"
+    android:outlineProvider="background"
+    android:outlineSpotShadowColor="@color/colorPrimaryDark"
+    android:padding="@dimen/dim_10dp"
+    app:cardElevation="@dimen/dim_5dp"
+    project:cardCornerRadius="20dp">
+    <!--android:background="@color/colorDialogBg"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_card_tool"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/card_box">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/dim_5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:padding="@dimen/dim_5dp"
+                    android:text="Filter"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_size_16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dim_5dp"
+                    android:src="@drawable/ic_cross"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_layer_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_card_tool"
+            android:layout_centerInParent="true"
+            android:layout_marginVertical="@dimen/dim_25dp"
+            android:padding="@dimen/dim_10dp">
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_select_from_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="@dimen/dim_10dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@color/colorPrimaryDark"
+                android:dividerHeight="1.0px"
+                android:outlineProvider="background"
+                android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                android:padding="@dimen/dim_10dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/dim_25dp"
+                app:cardElevation="@dimen/dim_5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edt_from_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dim_12dp"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_cal_month"
+                        android:drawablePadding="@dimen/dim_5dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Select From Date"
+                        android:inputType="textPostalAddress"
+                        android:padding="@dimen/dim_10dp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorFentText"
+                        android:textSize="@dimen/txt_size_14sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_select_to_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_select_from_date"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="@dimen/dim_10dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@color/colorPrimaryDark"
+                android:dividerHeight="1.0px"
+                android:outlineProvider="background"
+                android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                android:padding="@dimen/dim_10dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/dim_25dp"
+                app:cardElevation="@dimen/dim_5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edt_to_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dim_12dp"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/ic_cal_month"
+                        android:drawablePadding="@dimen/dim_5dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Select To Date"
+                        android:inputType="textPostalAddress"
+                        android:padding="@dimen/dim_10dp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorFentText"
+                        android:textSize="@dimen/txt_size_14sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_select_emp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_select_to_date"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="@dimen/dim_10dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:divider="@color/colorPrimaryDark"
+                android:dividerHeight="1.0px"
+                android:outlineProvider="background"
+                android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                android:padding="@dimen/dim_5dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/dim_25dp"
+                app:cardElevation="@dimen/dim_5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner_EmpList"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="@dimen/dim_12dp"
+                        android:drawSelectorOnTop="true"
+                        android:hint="@string/str_select_user_role"
+                        android:isScrollContainer="true"
+                        android:paddingHorizontal="@dimen/dim_8dp"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="gravity"
+                        android:textColor="@color/colorGray"
+                        android:textColorHint="@color/colorFentText"
+                        android:textSize="@dimen/txt_size_10sp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/li_layer_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_layer_one"
+            android:layout_marginHorizontal="@dimen/dim_20dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dim_5dp"
+                android:layout_weight="5"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_btn_cancel"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="@dimen/dim_15dp"
+                    android:background="@drawable/solid_rounded_orrange_btn"
+                    android:elevation="@dimen/dim_5dp"
+                    android:gravity="center"
+                    android:onClick="@{(v) -> empList.onClick(v)}"
+                    android:shadowColor="@color/colorPrimary"
+                    android:text="Cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_size_16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_5dp"
+                android:layout_weight="5"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_btn_app_filter"
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_marginVertical="@dimen/dim_15dp"
+                    android:background="@drawable/solid_rounded_blue_btn"
+                    android:elevation="@dimen/dim_5dp"
+                    android:gravity="center"
+                    android:onClick="@{(v) -> empList.onClick(v)}"
+                    android:shadowColor="@color/colorPrimary"
+                    android:text="Apply Filter"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_size_16sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView><!--
+</layout>-->

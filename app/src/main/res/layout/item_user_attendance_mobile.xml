@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="userMobileItem"
+            type="com.appynitty.adminapp.models.UserAttendanceDTO" />
+        <variable
+            name="isActiveU"
+            type="Boolean" />
+
+    </data>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dim_12dp"
+    app:cardElevation="@dimen/dim_5dp"
+    android:padding="@dimen/dim_10dp"
+    android:layout_marginVertical="@dimen/dim_10dp"
+    android:layout_marginHorizontal="5dp"
+    android:divider="@color/colorPrimaryDark"
+    android:dividerHeight="1.0px"
+    android:outlineSpotShadowColor="@color/colorPrimaryDark"
+    android:outlineProvider="background"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dim_10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_card_tool"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/card_box">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/dim_5dp">
+
+                <TextView
+                    android:id="@+id/txt_emp_name_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:gravity="start"
+                    android:padding="@dimen/dim_5dp"
+                    android:text="Rahul Rokade"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_size_14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_mo_user_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/dim_5dp"
+                    android:text="Supervisor"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_size_14sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/li_crd_box_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_card_tool"
+            android:layout_marginTop="@dimen/dim_5dp"
+            android:padding="@dimen/dim_5dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dim_8dp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dim_4dp"
+                        android:gravity="start"
+                        android:layout_marginBottom="@dimen/dim_10dp"
+                        android:text="Employee Route"
+                        android:textColor="@color/colorFentText"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:layout_marginTop="@dimen/dim_2dp"
+                        android:gravity="start"
+                        android:text="Start Date/Time"
+                        android:textColor="@color/colorFentText"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_start_date_at"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:gravity="start"
+                        android:text="23/11/2022"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+
+                    <TextView
+                        android:id="@+id/txt_start_time_at"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:gravity="start"
+                        android:text="02:00 PM"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:layout_marginTop="@dimen/dim_2dp"
+                        android:gravity="start"
+                        android:text="Status"
+                        android:textColor="@color/colorFentText"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:gravity="start"
+                        android:text="Active"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_marginEnd="@dimen/dim_2dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dim_8dp"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="@dimen/dim_20dp"
+                        android:layout_gravity="end"
+                        android:padding="@dimen/dim_2dp"
+                        android:layout_marginBottom="@dimen/dim_10dp"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:src="@drawable/ic_location"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:text="End Date/Time"
+                        android:textColor="@color/colorFentText"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_end_date_at"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:gravity="end"
+                        android:text="23/11/2022"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_ent_time_at"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:text="04:00 pm"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_12sp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:text="Login Device"
+                        android:textColor="@color/colorFentText"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+                    <TextView
+                        android:id="@+id/txt_login_device"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:paddingVertical="@dimen/dim_1dp"
+                        android:text="Mobile"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_size_12sp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+</layout>

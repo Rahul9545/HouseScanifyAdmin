@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/dim_5dp">
+
+
+    <TextView
+        android:id="@+id/tvNameRow"
+        android:layout_width="130sp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dim_10dp"
+        android:padding="@dimen/dim_5dp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvHouseCountRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_15dp"
+        android:layout_marginEnd="@dimen/dim_15dp"
+        android:layout_toEndOf="@+id/tvNameRow"
+        android:gravity="center"
+        android:padding="@dimen/dim_5sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvLiquidRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_15dp"
+        android:layout_marginEnd="@dimen/dim_15dp"
+        android:layout_toEndOf="@+id/tvHouseCountRow"
+        android:gravity="center"
+        android:padding="@dimen/dim_5sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvStreetRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_10dp"
+        android:layout_marginEnd="@dimen/dim_20dp"
+        android:layout_toEndOf="@+id/tvLiquidRow"
+        android:gravity="center"
+        android:padding="@dimen/dim_5sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/tvDumpRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_15dp"
+        android:layout_marginEnd="@dimen/dim_15dp"
+        android:layout_toEndOf="@+id/tvStreetRow"
+        android:gravity="center"
+        android:padding="@dimen/dim_5sp"
+        android:text="" />
+
+
+</RelativeLayout>

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="addEmpViewModel"
+            type="com.appynitty.adminapp.viewmodels.AddEmpViewModel" />
+
+        <!--<variable
+            name="empDetails"
+            type="com.appynitty.adminapp.models.EmpDModelDTO" />-->
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorScreenBg"
+        tools:context=".activities.AddEmpActivity">
+
+        <include
+            android:id="@+id/rl_custom_toolbar"
+            layout="@layout/custom_toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_custom_toolbar"
+            android:layout_margin="@dimen/dim_10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_btn_save"
+                android:layout_width="160dp"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/dim_15dp"
+                android:background="@drawable/solid_rounded_blue_btn"
+                android:elevation="@dimen/dim_5dp"
+                android:gravity="center|center_vertical"
+                android:onClick="@{(v) -> addEmpViewModel.onClick(v)}"
+                android:shadowColor="@color/colorPrimary"
+                android:text="Save"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_size_16sp" />
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/txt_btn_save"
+                android:fitsSystemWindows="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_emp_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="@dimen/dim_10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@color/colorPrimaryDark"
+                        android:dividerHeight="1.0px"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:outlineProvider="background"
+                        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                        android:padding="@dimen/dim_10dp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/dim_25dp"
+                        app:cardElevation="@dimen/dim_5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_empId"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dim_12dp"
+                                android:background="@android:color/transparent"
+                                android:hint="Emp id"
+                                android:inputType="text"
+                                android:padding="@dimen/dim_10dp"
+                                android:singleLine="true"
+                                android:text="@={addEmpViewModel.qrEmpId}"
+                                android:textColorHint="@color/colorFentText"
+                                android:textSize="@dimen/txt_size_14sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_emp_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="@dimen/dim_10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@color/colorPrimaryDark"
+                        android:dividerHeight="1.0px"
+                        android:outlineProvider="background"
+                        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                        android:padding="@dimen/dim_10dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/dim_25dp"
+                        app:cardElevation="@dimen/dim_5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_emp_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dim_12dp"
+                                android:background="@android:color/transparent"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                android:hint="@string/str_hint_employee_name"
+                                android:inputType="textCapWords"
+                                android:padding="@dimen/dim_10dp"
+                                android:singleLine="true"
+                                android:text="@={addEmpViewModel.qrEmpName}"
+                                android:textColorHint="@color/colorFentText"
+                                android:textSize="@dimen/txt_size_14sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_emp_mobile_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="@dimen/dim_10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@color/colorPrimaryDark"
+                        android:dividerHeight="1.0px"
+                        android:outlineProvider="background"
+                        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                        android:padding="@dimen/dim_10dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/dim_25dp"
+                        app:cardElevation="@dimen/dim_5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_emp_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dim_12dp"
+                                android:background="@android:color/transparent"
+                                android:hint="@string/str_hint_mobile_number"
+                                android:inputType="phone"
+                                android:maxLength="10"
+                                android:padding="@dimen/dim_10dp"
+                                android:singleLine="true"
+                                android:text="@={addEmpViewModel.qrEmpMobileNumber}"
+                                android:textColorHint="@color/colorFentText"
+                                android:textSize="@dimen/txt_size_14sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_emp_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="@dimen/dim_10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@color/colorPrimaryDark"
+                        android:dividerHeight="1.0px"
+                        android:outlineProvider="background"
+                        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                        android:padding="@dimen/dim_10dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/dim_25dp"
+                        app:cardElevation="@dimen/dim_5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_emp_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dim_12dp"
+                                android:background="@android:color/transparent"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890,.@"
+                                android:hint="@string/str_hint_address"
+                                android:inputType="textPostalAddress"
+                                android:padding="@dimen/dim_10dp"
+                                android:singleLine="true"
+                                android:text="@={addEmpViewModel.qrEmpAddress}"
+                                android:textColorHint="@color/colorFentText"
+                                android:textSize="@dimen/txt_size_14sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_emp_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="@dimen/dim_10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@color/colorPrimaryDark"
+                        android:dividerHeight="1.0px"
+                        android:outlineProvider="background"
+                        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                        android:padding="@dimen/dim_10dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/dim_25dp"
+                        app:cardElevation="@dimen/dim_5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_emp_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dim_12dp"
+                                android:background="@android:color/transparent"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890"
+                                android:hint="@string/str_hint_username"
+                                android:inputType="textPostalAddress"
+                                android:padding="@dimen/dim_10dp"
+                                android:singleLine="true"
+                                android:text="@={addEmpViewModel.qrEmpLoginId}"
+                                android:textColorHint="@color/colorFentText"
+                                android:textSize="@dimen/txt_size_14sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_emp_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="@dimen/dim_10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@color/colorPrimaryDark"
+                        android:dividerHeight="1.0px"
+                        android:outlineProvider="background"
+                        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                        android:padding="@dimen/dim_10dp"
+                        app:cardBackgroundColor="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/dim_25dp"
+                        app:cardElevation="@dimen/dim_5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_emp_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dim_12dp"
+                                android:background="@android:color/transparent"
+                                android:hint="@string/str_hint_password"
+                                android:minEms="4"
+                                android:padding="@dimen/dim_10dp"
+                                android:singleLine="true"
+                                android:text="@={addEmpViewModel.qrEmpPassword}"
+                                android:textColorHint="@color/colorFentText"
+                                android:textSize="@dimen/txt_size_14sp" />
+                            <!--android:inputType="textPassword"-->
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/card_emp_login_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="@dimen/dim_10dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:divider="@color/colorPrimaryDark"
+                        android:dividerHeight="1.0px"
+                        android:outlineProvider="background"
+                        android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                        android:padding="@dimen/dim_10dp"
+                        app:cardBackgroundColor="@color/colorScreenBg"
+                        app:cardCornerRadius="@dimen/dim_25dp"
+                        app:cardElevation="@dimen/dim_5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/edt_emp_login_num"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dim_12dp"
+                                android:background="@android:color/transparent"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/str_hint_login_number"
+                                android:inputType="text"
+                                android:padding="@dimen/dim_10dp"
+                                android:singleLine="true"
+                                android:text="@={addEmpViewModel.qrImoNo}"
+                                android:textColorHint="@color/colorFentText"
+                                android:textSize="@dimen/txt_size_14sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/dim_8dp"
+                        android:layout_marginStart="@dimen/dim_40_dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_clear_login"
+                            style="@style/CheckBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/dim_10dp"
+                            android:layout_weight="5"
+                            android:buttonTint="@color/colorPrimaryDark"
+                            android:elevation="@dimen/dim_8dp"
+                            android:gravity="center_vertical"
+                            android:onClick="@{(v) -> addEmpViewModel.onClick(v)}"
+                            android:padding="@dimen/dim_10dp"
+                            android:text="@string/str_chkbox_clear_login"
+                            android:textSize="@dimen/txt_size_12sp" />
+
+                        <CheckBox
+                            android:id="@+id/cb_isActive"
+                            style="@style/CheckBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dim_10dp"
+                            android:layout_weight="5"
+                            android:buttonTint="@color/colorPrimaryDark"
+                            android:elevation="@dimen/dim_8dp"
+                            android:gravity="center_vertical"
+                            android:onClick="@{(v) -> addEmpViewModel.onClick(v)}"
+                            android:padding="@dimen/dim_10dp"
+                            android:text="@string/str_chkbox_is_active"
+                            android:textSize="@dimen/txt_size_12sp" />
+                        <!--android:onClick="@{(v) -> addEmpViewModel.onClick(v)}"-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

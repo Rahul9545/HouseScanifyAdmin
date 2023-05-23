@@ -1,0 +1,220 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AdminAppDemo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyButtonStyle1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_button1</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@drawable/rd_btn_selector_bg</item>
+        <item name="buttonTint">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="ThemeOverlay.BottomNavView" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorOnSurface">@color/colorDivider</item>
+        <item name="android:textColorSecondary">@color/colorDivider</item>
+    </style>
+
+
+
+    <style name="CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">@drawable/rd_btn_selector_bg</item>
+        <item name="buttonTint">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="radionbutton"
+        parent="Base.Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radiobutton_drawable</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:textColor">#FF01F0</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceSmall" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Small">
+        <item name="android:textColor">#545656</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceLarge" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Large">
+        <item name="android:textColor">#545656</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLarge
+        </item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmall
+        </item>
+    </style>
+
+    <style name="MyProgressDialog" parent="Theme.AppCompat.Dialog" />
+
+    <style name="MyEditTextStyleLight" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">@dimen/txt_size_12sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textCursorDrawable">@drawable/box</item>
+        <!--<item name="android:background">@drawable/rounded_corners_text_view</item>-->
+        <item name="android:layout_marginTop">@dimen/dim_5dp</item>
+        <item name="android:backgroundTint">@color/colorDefault</item>
+        <item name="android:paddingBottom">@dimen/dim_10dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="expandedBarTextStyle" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="android:textSize">0sp</item>
+        <item name="android:textColor">@android:color/transparent</item>
+
+    </style>
+
+
+    <style name="CustomEditTextStyleLight" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+        <item name="android:textCursorDrawable">@drawable/box</item>
+        <!--<item name="android:background">@drawable/rounded_corners_text_view</item>-->
+        <item name="android:layout_marginTop">@dimen/dim_10dp</item>
+        <item name="android:backgroundTint">@color/colorDefault</item>
+        <item name="android:paddingBottom">@dimen/dim_10dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="MyEditTextStyleDark" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textCursorDrawable">@drawable/box</item>
+        <!--<item name="android:background">@drawable/rounded_corners_text_view</item>-->
+        <item name="android:layout_marginTop">@dimen/dim_10dp</item>
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:paddingBottom">@dimen/dim_10dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="MyEditTextStylelight.Dark" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/txt_size_14sp</item>
+        <item name="android:textCursorDrawable">@drawable/box</item>
+        <!--<item name="android:background">@drawable/rounded_corners_text_view</item>-->
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:paddingBottom">@dimen/dim_10dp</item>
+    </style>
+
+    <style name="MyfabButton" parent="AppTheme.NoActionBar">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/dim_15dp</item>
+        <item name="android:textSize">@dimen/txt_size_24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/white</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+
+    <style name="MyButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_primary_button</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="MyAutoEditTextStyleDark" parent="Base.V7.Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:layout_width">match_parent</item>
+        <!--<item name="android:textSize">@dimen/settings_text_size</item>-->
+        <item name="android:layout_height">wrap_content</item>
+        <!--<item name="android:textCursorDrawable">@drawable/cursor_white</item>-->
+        <!--&lt;!&ndash;<item name="android:background">@drawable/rounded_corners_text_view</item>&ndash;&gt;-->
+        <!--<item name="android:layout_marginTop">@dimen/edit_text_margin_padding</item>-->
+        <!--<item name="android:paddingBottom">@dimen/edit_text_margin_padding</item>-->
+        <!--<item name="android:maxLines">1</item>-->
+    </style>
+
+    <style name="TextLabel2" parent="AppTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundTint">@android:color/white</item>
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@android:color/white</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+
+    <style name="SBA.AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="SBA.AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:buttonBarNegativeButtonStyle" >@style/NegativeButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/NegativeButtonStyle</item>
+
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+</resources>

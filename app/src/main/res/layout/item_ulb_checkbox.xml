@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="ulbList"
+            type="com.appynitty.adminapp.models.UlbDTO"/>
+        
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_5dp">
+
+        <CheckBox
+            android:id="@+id/chk_box_ulb_name"
+            style="@style/CheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/dim_10dp"
+            android:layout_marginTop="@dimen/dim_2dp"
+            android:choiceMode="multipleChoice"
+            android:buttonTint="@color/colorPrimaryDark"
+            android:checked="false"
+            android:elevation="@dimen/dim_8dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dim_10dp"
+            android:text="@{ulbList.ulbName}"
+            android:textSize="@dimen/txt_size_14sp" />
+
+
+    </RelativeLayout>
+</layout>

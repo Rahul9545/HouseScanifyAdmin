@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorScreenBg"
+    tools:context=".fragments.HouseDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:paddingHorizontal="@dimen/dim_5dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/rd_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dim_5dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dim_5dp"
+                android:paddingVertical="@dimen/dim_2dp">
+
+                <RadioButton
+                    android:id="@+id/rdHouse"
+                    style="@style/RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:checked="true"
+                    android:text="House" /><!--android:textSize="@dimen/txt_size_10sp"-->
+
+                <RadioButton
+                    android:id="@+id/rdDumpyard"
+                    style="@style/RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="Dumpyard" />
+
+                <RadioButton
+                    android:id="@+id/rdLiquid"
+                    style="@style/RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="Liquid" />
+
+                <RadioButton
+                    android:id="@+id/rdStreet"
+                    style="@style/RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="Street" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/li_search_with_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rd_group"
+                android:layout_marginBottom="@dimen/dim_2dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_dash_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dim_4dp"
+                    android:layout_marginVertical="@dimen/dim_5dp"
+                    android:layout_weight="6"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@color/colorPrimaryDark"
+                    android:dividerHeight="1.0px"
+                    android:outlineProvider="background"
+                    android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                    android:padding="@dimen/dim_10dp"
+                    app:cardCornerRadius="@dimen/dim_25dp"
+                    app:cardElevation="@dimen/dim_4dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_search_box"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dim_5dp"
+                        android:padding="@dimen/dim_10dp">
+
+                        <ImageView
+                            android:id="@+id/img_search"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_search" />
+
+                        <EditText
+                            android:id="@+id/etHouseFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dim_5dp"
+                            android:layout_toStartOf="@id/img_close"
+                            android:layout_toEndOf="@id/img_search"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:hint="@string/str_search_by_id"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txt_size_12sp" />
+
+                        <ImageView
+                            android:id="@+id/img_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dim_2dp"
+                            android:src="@drawable/ic_close"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_filter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="@dimen/dim_4dp"
+                    android:layout_marginVertical="@dimen/dim_5dp"
+                    android:layout_weight="3"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:divider="@color/colorPrimaryDark"
+                    android:dividerHeight="2.0px"
+                    android:outlineProvider="background"
+                    android:outlineSpotShadowColor="@color/colorPrimaryDark"
+                    android:padding="@dimen/dim_10dp"
+                    app:cardCornerRadius="@dimen/dim_25dp"
+                    app:cardElevation="@dimen/dim_4dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/dim_12dp">
+
+                        <ImageView
+                            android:id="@+id/img_filter"
+                            android:layout_width="@dimen/dim_20dp"
+                            android:layout_height="@dimen/dim_20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginHorizontal="@dimen/dim_5dp"
+                            android:src="@drawable/edit" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dim_4dp"
+                            android:layout_toEndOf="@id/img_filter"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical|center"
+                            android:padding="@dimen/dim_2dp"
+                            android:singleLine="true"
+                            android:text="Filter"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/txt_size_12sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvItementries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/li_search_with_filter"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dim_20dp"
+                android:layout_marginBottom="@dimen/dim_2dp"
+                android:padding="@dimen/dim_2dp"
+                android:text=""
+                android:textColor="@color/colorFentText"
+                android:textSize="@dimen/txt_size_12sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_list_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvItementries"
+                android:layout_marginBottom="@dimen/dim_4dp"
+                android:padding="@dimen/dim_5dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_House_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:fitsSystemWindows="true"
+                    android:scrollbars="horizontal">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <ProgressBar
+                    android:id="@+id/progress_circular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_no_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/dim_5dp"
+                    android:text="@string/str_no_data_found"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/txt_size_12sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivHoriIndicatorDown"
+                    android:layout_width="25dp"
+                    android:layout_height="@dimen/dim_25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dim_25dp"
+                    android:layout_marginBottom="@dimen/dim_15dp"
+                    android:src="@drawable/ic_down_arrow1"
+                    android:rotation="-90"
+                    android:visibility="gone"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_entries_bottom1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_list_box"
+                android:layout_centerInParent="true"
+                android:layout_marginVertical="@dimen/dim_5dp"
+                android:padding="@dimen/dim_5dp"
+                android:text=""
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/txt_size_12sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/hsdProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

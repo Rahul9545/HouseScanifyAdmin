@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">HSAdmin</string>
+    <string name="ulbcounttext">"ULB Count: "</string>
+    <string name="str_hint_employee_name">Employee Name</string>
+    <string name="str_hint_mobile_number">Mobile Number</string>
+    <string name="str_hint_address">Address</string>
+    <string name="str_hint_username">Username</string>
+    <string name="str_hint_password">Password</string>
+    <string name="str_hint_login_number">Login Number</string>
+    <string name="str_chkbox_clear_login">Clear Login</string>
+    <string name="str_chkbox_is_active">Is Active</string>
+    <string name="str_card_btn_filter">Filter</string>
+    <string name="str_hint_search_name">Search Name</string>
+    <string name="str_select_user_role">Select User Role</string>
+    <string name="str_hint_search_ulbs_name">Search ULBs Name</string>
+    <string name="str_no_data_found">No Data Found</string>
+    <string name="rd_btn_active_users">Active Users</string>
+    <string name="rd_btn_non_active_users">Non Active Users</string>
+    <string name="str_card_btn_add_emp">Add Emp</string>
+    <string name="str_emp_mobile">Mobile</string>
+    <string name="str_user_role">User Role</string>
+    <string name="str_emp_status">Status</string>
+    <string name="str_emp_address">Address</string>
+    <string-array name="array_user_role">
+        <item>Admin</item>
+        <item>Sub-Admin</item>
+    </string-array>
+    <string name="imageCount">Photo\'s Count: %2$d / %1$d</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_search_name_or_id">Search Name or ID</string>
+    <string name="str_hint_search_employees_name">Search employee name</string>
+    <string name="str_active">Active</string>
+    <string name="str_inactive">Inactive</string>
+    <string name="str_entries">Entries %s</string>
+    <string name="updateEmpDetails">UPDATE EMPLOYEE DETAILS</string>
+    <string name="addEmp">ADD EMPLOYEE</string>
+    <string name="slct_emp">"Please select an employee:  "</string>
+    <string name="str_search_by_id">Search by House Id</string>
+    <string name="btn_update">Update</string>
+    <string name="latitude">Latitude</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="attendance_instructions">* Please turn on the button to go to the dashboard.</string>
+    <string name="subAdmin">SUB-ADMIN</string>
+    <string name="adminTitle">ADMIN</string>
+    <string name="greetings">Hello,</string>
+    <string name="app_notification_description">Please don\'t kill the app,\nThank you! </string>
+    <string name="background_location_permission_message">-Allow only while using the app- permission has been granted. If you want         to get location updates in the background even when not using the app then grant         -Allow all the time- permission</string>
+    <string name="rationale_location">This app needs access to your location to know where you are.</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="returned_from_app_settings_to_activity">
+        Returned from app settings with permissions:
+        \nLocation: %s
+    </string>
+    <string name="backgroundwork">Working in background</string>
+    <string name="strBackOnline">Back online</string>
+    <string name="strNoInternet">No internet connection</string>
+    <string name="ok">Ok</string>
+    <string name="requestInternet">Please connect to the internet and try again!</string>
+    <string name="str_user_role_admin">Admin</string>
+    <string name="str_usr_role_super_admin">Super Admin</string>
+    <string name="str_usr_role_sub_admin">Supervisor</string>
+
+    <string name="str_mobile">Mobile</string>
+    <string name="str_mobile_browser">Mobile Browser</string>
+    <string name="str_pc">PC</string>
+    <string name="str_web_ser">WEB Service</string>
+
+
+    <!--User Attendance -->
+    <string name="rd_btn_mobile_users">Mobile User</string>
+    <string name="rd_btn_pc_users">PC User</string>
+
+    <!--Map Activity-->
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        AIzaSyB7w-l0RWEUVqhXyshtsgdkqJDNxaKQ5lY
+    </string>
+</resources>

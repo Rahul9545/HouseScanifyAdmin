@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="Employee"
+            type="com.appynitty.adminapp.models.EmployeeDetailsDTO" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dim_5dp">
+
+        <TableLayout
+            android:id="@+id/table_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/table_row"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/dim_1dp">
+
+                <TextView
+                    android:id="@+id/row_txt_name"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.4"
+                    android:text="@{Employee.empName}"
+                    android:textColor="@color/colorFentText"
+                    android:textSize="@dimen/txt_size_12sp" />
+
+                <TextView
+                    android:id="@+id/row_txt_house"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@{String.valueOf(Employee.houseCount)}"
+                    android:textColor="@color/colorFentText"
+                    android:textSize="@dimen/txt_size_12sp" />
+
+                <TextView
+                    android:id="@+id/row_txt_liquid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{String.valueOf(Employee.liquidCount)}"
+                    android:textColor="@color/colorFentText"
+                    android:textSize="@dimen/txt_size_12sp" />
+
+                <TextView
+                    android:id="@+id/row_txt_street"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{String.valueOf(Employee.streetCount)}"
+                    android:textColor="@color/colorFentText"
+                    android:textSize="@dimen/txt_size_12sp" />
+
+                <TextView
+                    android:id="@+id/row_txt_dump"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@{String.valueOf(Employee.dumpCount)}"
+                    android:textColor="@color/colorFentText"
+                    android:textSize="@dimen/txt_size_12sp" />
+
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+</layout>

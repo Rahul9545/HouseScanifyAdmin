@@ -1,0 +1,153 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="LoginViewModel"
+            type="com.appynitty.adminapp.viewmodels.LoginViewModel" />
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintDimensionRatio="1.1"
+        tools:context=".activity.LoginActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:id="@+id/rl_logo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250sdp"
+                android:padding="@dimen/_20sdp"
+                android:background="@drawable/bg_login"
+                android:contentDescription="@string/app_name">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/app_icon_white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="90dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:text="HOUSE SCANIFY LOGIN"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_login1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/dim_25dp"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/dim_10dp">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_UserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dim_10dp"
+                        app:hintEnabled="false"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext"
+                            android:hint="Username"
+                            android:digits="abcdefghijklmnopqrstuvwxyz1234567890 "
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:padding="15dp"
+                            android:singleLine="true"
+                            android:text="@={LoginViewModel.UserLoginId}"
+                            android:textColor="@color/colorGray" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_UserPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/til_UserName"
+                        android:layout_margin="@dimen/dim_10dp"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/colorPrimaryDark"
+                        app:hintEnabled="false"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/til_UserName"
+                            android:background="@drawable/rounded_edittext"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:textColor="@color/colorGray"
+                            android:maxLines="1"
+                            android:padding="15dp"
+                            android:text="@={LoginViewModel.UserPassword}"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="150dp"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/til_UserPassword"
+                        android:layout_marginVertical="@dimen/dim_10dp"
+                        android:text="LOGIN"
+                        android:onClick="@{(v) -> LoginViewModel.onClick(v)}"
+                        android:background="@drawable/rounded_primary_button"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/white" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

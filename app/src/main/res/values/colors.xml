@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#30d6e0</color>
+    <color name="colorPrimaryDark">#0c73a7</color>
+    <color name="colorAccent">#168bc6</color>
+    <color name="colorPinkLight">#ff6058</color>
+    <color name="colorOrange">#fe973c</color>
+
+    <color name="colorOFFDutyRed">#ff6168</color>
+    <color name="colorONDutyGreen">#3d8e40</color>
+    <color name="bottomBarItemColor">#04EB0B</color>
+
+    <color name="colorDefault">#9e9e9e</color>
+    <color name="colorGray">#757575</color>
+    <color name="colorBlackGray">#0F0F0F</color>
+    <color name="colorGrayList">#383838</color>
+    <color name="colorBlack">#050505</color>
+    <color name="colorDivider">#C8C8C8</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDialogBg">#ECECEC</color>
+
+    <color name="colorItemSelected">#c8e6c9</color>
+    <color name="black_alpha_170">#86000000</color>
+    <color name="black_alpha_20">#32000000</color>
+    <color name="black_alpha_5">#0D000000</color>
+    <color name="black_alpha_45">#72000000</color>
+    <color name="white_alpha_50">#80FFFFFF</color>
+
+    <!--Screen Color-->
+    <color name="colorScreenBg">#F2F2F2</color>
+    <color name="colorBoxBg">#158CC9</color>
+    <color name="colorBoldText">#4F4F4F</color>
+    <color name="colorFentText">#979797</color>
+    <color name="colorGrayLight">#E8D3D1D1</color>
+    <color name="colorHintText">#B6B6B6</color>
+
+    <!--box color live data fragment-->
+    <color name="color_blue_start">#619FDE</color>
+    <color name="color_blue_end">#3D6D9C</color>
+
+    <color name="color_purple_start">#B36CEE</color>
+    <color name="color_purple_end">#76479C</color>
+
+    <color name="color_green_start">#41c163</color>
+    <color name="color_green_end">#1e7735</color>
+
+    <color name="color_red_start">#EF6C71</color>
+    <color name="color_red_end">#B1464B</color>
+    <color name="pinkDark">#f900ff</color>
+    <color name="red">#E12626</color>
+    <color name="yello">#FFEE54</color>
+    <color name="green">#114234</color>
+    <color name="brown">#473533</color>
+    <color name="transparentBlue">#BFB36CEE</color>
+</resources>
